@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Page, Text, Image, Document, View } from '@react-pdf/renderer';
 import './pdf.css'
-import {useEffect, useState } from 'react';
+// import {useEffect, useState } from 'react';
 function PDF({anotherName}) {
     // const [name, setName] = useState('')
   console.log('another name is ------->', anotherName);

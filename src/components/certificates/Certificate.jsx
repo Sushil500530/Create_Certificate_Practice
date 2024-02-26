@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import certificateImage from '../../assets/certificate.png';
 import './certificate.css'
 import { saveAsPng } from 'save-html-as-image';
 import PDF from '../pdf/PDF';

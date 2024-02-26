@@ -18,7 +18,6 @@ const Navbar = () => {
        
          {
              user ? <>
-             <li><NavLink to="/book">Book Clube</NavLink></li>
              <li className="relative"><NavLink to="/order">Ordered
              <div className="badge badge-secondary absolute -top-3 -right-2 text-xl font-medium translate-x-[2px]">+{items.length}</div>
          </NavLink></li>
