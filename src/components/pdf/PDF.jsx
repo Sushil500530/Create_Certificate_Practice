@@ -9,7 +9,7 @@ function PDF() {
     return (
         <Document>
             <Page size="A4">
-                <View style={{position:'relative',}}>
+                <View style={{position:'relative', overflow:'hidden'}}>
                     {/* <div id='certificate'> */}
                         <Text style={{position:"absolute", top:'380px', right:'0', zIndex:1, left:'80px', fontSize:'60px', textTransform:'capitalize',fontWeight:'bold'}} >{findName}</Text>
                         <Image src={certificateImage} style={{ width: '600', height: '800', zIndex:3 }} />

@@ -7,18 +7,16 @@ import { PDFDownloadLink } from '@react-pdf/renderer';
 
 const Certificate = () => {
     const [name, setName] = useState('');
-    const common = document.querySelector("#certificate");
-    const [transfer, setTransfer] = useState(name);
     const componentRef = React.createRef()
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const common = document.querySelector("#certificate")
         localStorage.setItem('name', name)
-        // await saveAsPng(common)
-        setTransfer(name)
+        await saveAsPng(common)
     }
 
     return (
-        <div className='mb-20'>
+        <div className='mb-20 p-5'>
             <h1 className="text-2xl font-bold text-center my-5">Here is Certificate comming</h1>
             <PDFDownloadLink document={<PDF/>} fileName='certificate.pdf'>
                 {
@@ -32,9 +30,9 @@ const Certificate = () => {
                     <button onClick={handleSubmit} type='submit' className='btn btn-success'>Download</button>
                 </form>
             </div>
-            <div id='certificate' ref={componentRef} className='w-[80%] mx-auto h-[750px] certificate relative'>
-                <h1 className='absolute top-96 md:top-[350px] left-0 right-0 text-5xl lg:text-6xl font-bold capitalize text-center'>{name}</h1>
-                <img src={certificateImage} alt="certificate" className='w-full h-full' />
+            <div id='certificate' ref={componentRef} className='w-full h-full certificate relative'>
+                <h1 className='absolute top-24 md:top-[232px] lg:top-[300px] xl:top-[400px] 2xl:top-[500px] left-0 right-0 text-2xl md:text-5xl lg:text-6xl font-bold capitalize text-center'>{name}</h1>
+                <img src='https://i.ibb.co/3yMGWhT/certificate-new.png' alt="certificate" className='w-full h-full' />
                 <h1 className='absolute top-[350px] left-0 right-0 text-3xl md:text-4xl lg:text-6xl font-bold capitalize text-center'></h1>
             </div>
         </div>
